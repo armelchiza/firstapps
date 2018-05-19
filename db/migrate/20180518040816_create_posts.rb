@@ -3,9 +3,9 @@ class CreatePosts < ActiveRecord::Migration[5.2]
     create_table :posts do |t|
       t.string :title
       t.text :body
-      t.integer :fot
-      t.integer :dfow
-      t.integer :dfol
+      t.decimal :fot
+      t.decimal :dfow
+      t.decimal :dfol
       t.decimal :percentDFO
       t.timestamps
     end
