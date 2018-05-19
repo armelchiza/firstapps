@@ -1,0 +1,26 @@
+<%= form_for @post do |f| %>
+  <div class='form-group'>
+    <%= f.label :Team %>
+    <%= f.text_field :title, class: 'form-control'%>
+  </div>
+  <div class='form-group'>
+    <%= f.label :Description%>
+    <%= f.text_area :body, class: 'form-control'%>
+  </div>
+  <div class='form-group'>
+    <%= f.label :faceoffs%>
+    <%= f.number_field :fot, class: 'form-control'%>
+  </div>
+  <div class='form-group'>
+    <%= f.label :'Defensive Face-off wins'%>
+    <%= f.number_field :dfow, class: 'form-control'%>
+  </div>
+  <div class='form-group'>
+    <%= f.label :'Defencive Face-off losses'%>
+    <%= f.number_field :dfol, class: 'form-control'%>
+  </div>
+
+  <div class='form-group'>
+    <%= f.submit "Save", class: 'btn btn-block btn-success'%>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<%= div_for post, class:'post col-md-8 offset-md-2' do %>
+
+  <h2><%= post.title %></h2>
+  <p><%= post.body %></p>
+  <p><%= post.fot %></p>
+  <p><%= post.dfow %></p>
+  <p><%= post.dfol %></p>
+  <p><%= post.percentDFO %></p>
+  <p> sdjkfnsdjkfk;s </p>
+  <p>
+    <%= link_to "Edit", edit_post_path(post) %>
+    <%= link_to "Delete", post_path(post), method: :delete %>
+  </p>
+
+<% end %>

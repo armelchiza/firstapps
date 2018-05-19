@@ -1,4 +1,10 @@
+<div class = 'offset-md-2'>
+<div class='actions cold-md-8 offset-md-2'>
+  <button type="button" class="btn btn-outline-primary">
+    <%= link_to "++ TEAM ++", new_post_path %>
+  </button>
+</div>
 <% @posts.each do |post| %>
-  <h2> <%= post.title %> </h2>
-  <p> <%= post.body %> </p>
+  <%= render post %>
 <% end %>
+</div>
