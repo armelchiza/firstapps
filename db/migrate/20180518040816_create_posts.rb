@@ -9,5 +9,4 @@ class CreatePosts < ActiveRecord::Migration[5.2]
       t.decimal :percentDFO
       t.timestamps
     end
-  end
 end

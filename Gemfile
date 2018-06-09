@@ -28,7 +28,21 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+
+# gem for the bootstrap use ,, then : assets/stylesheets/application.sass
+
+            # @import "bootstrap-sprockets"
+            #
+            # @import "bootstrap"
+            #
+            # @import "posts"
+
 gem 'bootstrap-sass'
+
+# gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git' # install the lastest version
+
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -47,6 +61,8 @@ end
 gem 'record_tag_helper', '~> 1.0'
 
 gem 'bootstrap'
+
+
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'popper_js'

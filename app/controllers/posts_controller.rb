@@ -4,25 +4,27 @@ class PostsController < ApplicationController
     @posts = Post.order("updated_at DESC").all
   end
 
-  def calculate_percentDFO
-    posts = Post.all
-    posts.percentDFO == 22
-  end
-
   def new
     @post = Post.new();
   end
 
   def create
     @post = Post.new(post_params)
+    @post.before_save
     if @post.save
       redirect_to posts_path
     end
   end
 
+  # before_action :calculate_percentDFO
+  # def calculate_percentDFO
+  #   @post = Post.where(id: params[:id]).first
+  #   logger.info "_____________________ >>>>> "
+  #   logger.info @post
+  # end
+
   def edit
     @post = Post.where(id: params[:id]).first
-    @calculate_percentDFO
   end
 
   def update
@@ -41,6 +43,10 @@ class PostsController < ApplicationController
     else
       #jfbsjkdfnbajksf
     end
+  end
+
+  def show
+    @post = Post.where(id: params[:id]).first
   end
 
   private

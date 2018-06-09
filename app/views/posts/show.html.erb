@@ -1,0 +1,30 @@
+<h1>
+
+  <%= @post.title %>
+
+
+</h1>
+
+<p>City : <%= @post.body %></p>
+<p>Total face offs this season : <%= @post.fot %></p>
+<p>Face-off wins : <%= @post.dfow %></p>
+<p>Face off losses : <%= @post.dfol %></p>
+<p>Defensive FOs by percentage : <%= @post.percentDFO %></p>
+<hr>
+  <h3></h3>
+  <%= @post.comments.each do |comment| %>
+    <div class='panel panel-default'>
+      <div class='panel-body'>
+        <%= comment.body %>
+      </div>
+    </div>
+  <% end %>
+
+<%= form_for [@post, @post.comments.build] do |f|%>
+  <div class='form-group'>
+    <%= f.text_area :body, class: 'form-control'%>
+  </div>
+  <div class="actions">
+    <%= f.submit "Save", class: 'btn btn-success' %>
+  </div>
+<% end %>
